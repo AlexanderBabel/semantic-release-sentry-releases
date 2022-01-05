@@ -16,7 +16,7 @@ const path = require('path')
 async function getFiles (
   dir,
   urlPrefix,
-  appendPath = true,
+  appendPath = false,
   extensions = ['.js', '.map', '.jsbundle', '.bundle']
 ) {
   // eslint-disable-next-line security/detect-non-literal-fs-filename
@@ -42,7 +42,7 @@ async function getFiles (
   */
   for (const folder of folders) {
     files.push(
-      ...(await getFiles(path.join(dir, folder.name), urlPrefix, true))
+      ...(await getFiles(path.join(dir, folder.name), path.join(urlPrefix, folder.name), true))
     )
   }
 
