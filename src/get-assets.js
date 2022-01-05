@@ -16,7 +16,7 @@ const path = require('path')
 async function getFiles (
   dir,
   urlPrefix,
-  appendPath = false,
+  appendPath = true,
   extensions = ['.js', '.map', '.jsbundle', '.bundle']
 ) {
   // eslint-disable-next-line security/detect-non-literal-fs-filename
