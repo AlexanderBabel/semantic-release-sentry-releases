@@ -9,7 +9,7 @@
     "format:check": "prettier-standard --check '{src,test}/**/*.js'",
     "ts-compile-check": "tsc -p tsconfig.json --noEmit",
     "test": "nyc mocha test",
-    "postinstall": "husky install",
+    "postinstall-DISABLED": "husky install",
     "prepublishOnly": "pinst --disable",
     "postpublish": "pinst --enable"
   },
